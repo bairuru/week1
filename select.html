@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <div class="btn-group ml20 mt20">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="btn"> 点击下拉 <span class="btn-down"></span></button>
+        <ul class="dropdown-menu" role="menu">
+            <li>000001</li>
+            <li>000002</li>
+            <li>000003</li>
+            <li>000004</li>
+            <li>000005</li>
+        </ul>
+    </div>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $('#btn').click(function(){
+            if($(this).find('span').hasClass('btn-down')){
+                $(this).find('span').removeClass('btn-down').addClass('btn-up')
+            }else{
+                $(this).find('span').removeClass('btn-up').addClass('btn-down');
+            }
+        });
+    </script>
+</body>
+</html>
